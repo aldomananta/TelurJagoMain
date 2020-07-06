@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Telur Jago</string>
+    <string name="title_activity_seller_home">SellerHomeActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notificatins</string>
+
+    <string-array name="categories">
+        <item>Select product category</item>
+        <item>Telur Ayam Omega 3</item>
+        <item>Telur Non-Omega 3</item>
+        <item>Telur Ayam Kampung</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

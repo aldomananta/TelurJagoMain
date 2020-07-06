@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".Seller.ManageProductsFragment">
+
+    <ImageView
+        android:id="@+id/addImg"
+        android:layout_width="350dp"
+        android:layout_height="200dp"
+        android:src="@drawable/camera"
+        android:cropToPadding="false"
+        android:scaleType="center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        />
+
+    <RelativeLayout
+        android:id="@+id/form_layout"
+        android:layout_below="@+id/addImg"
+        android:layout_width="match_parent"
+        android:layout_height="370dp"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/white"
+        >
+
+        <Spinner
+            android:id="@+id/Spinner_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:layout_marginLeft="15dp"
+            android:entries="@array/categories"
+            />
+
+        <EditText
+            android:id="@+id/productsDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/input_design"
+            android:layout_below="@+id/priceTxt"
+            android:padding="13dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:hint="Product Description"
+            android:inputType="textMultiLine"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            />
+
+        <EditText
+            android:id="@+id/product_Store_Details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/input_design"
+            android:layout_below="@+id/productsDesc"
+            android:padding="13dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:hint="Store Name"
+            android:inputType="textMultiLine"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:visibility="invisible"
+            />
+
+
+        <EditText
+        android:id="@+id/productsAmnt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/input_design"
+        android:layout_below="@+id/Spinner_category"
+        android:padding="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:hint="Number of trays"
+        android:inputType="number"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        />
+
+        <EditText
+            android:id="@+id/priceTxt"
+            android:layout_below="@id/productsAmnt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="numberSigned"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            android:background="@drawable/input_design"
+            android:hint="Price per tray in Rp"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="20dp"
+            android:padding="15dp"
+             />
+
+
+        <Button
+            android:id="@+id/addBtn"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/productsDesc"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="7dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/buttons"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:text="Confirm"
+            android:textColor="@android:color/white"
+            />
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

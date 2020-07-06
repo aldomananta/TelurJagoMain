@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".Seller.SellerAccountActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/Seller_app_bar_account"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary"
+        >
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/Seller_toolbar_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <TextView
+                    android:id="@+id/Seller_edit_accountBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Edit"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="17dp"
+                    android:textStyle="bold"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="10dp"
+                    />
+
+                <TextView
+                    android:id="@+id/Seller_update_accountBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Update"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="17dp"
+                    android:textStyle="bold"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="10dp"
+                    android:visibility="invisible"
+                    />
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/Seller_profile_image"
+        android:layout_width="171dp"
+        android:layout_height="167dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/Seller_app_bar_account"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="3dp"
+        android:src="@drawable/profile"
+        app:civ_border_color="@color/gray"
+        app:civ_border_width="2dp" />
+
+    <TextView
+        android:id="@+id/Seller_profile_change"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/Seller_profile_image"
+        android:text="Change Profile"
+        android:layout_centerHorizontal="true"
+        android:enabled="false"
+        />
+
+    <RelativeLayout
+        android:id="@+id/Seller_form_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Seller_profile_change"
+        android:background="@android:color/white"
+        android:layout_marginTop="15dp"
+
+        >
+
+        <EditText
+            android:id="@+id/Seller_usernameAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="13dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:hint="Username"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:enabled="false"
+            />
+        <EditText
+            android:id="@+id/Seller_emailAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Seller_usernameAccount"
+            android:padding="13dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:hint="Email"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            android:enabled="false"
+            />
+
+        <EditText
+            android:id="@+id/Seller_phoneAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="13dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_below="@+id/Seller_emailAccount"
+            android:hint="Phone Number"
+            android:inputType="number"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            android:enabled="false"
+            />
+
+
+        <EditText
+            android:id="@+id/Seller_passwordAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="13dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_below="@+id/Seller_phoneAccount"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            android:enabled="false"
+            android:visibility="invisible"
+            />
+
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/Seller_logoutBtn"
+        android:layout_width="141dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Seller_form_layout"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/buttons2"
+        android:drawableRight="@drawable/logout"
+        android:text="Logout"
+        android:layout_marginTop="30dp"
+        android:textAllCaps="false"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/Seller_changePassword"
+        android:layout_width="141dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Seller_form_layout"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/buttons_netral"
+        android:text="Request to change password"
+        android:layout_marginTop="30dp"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:visibility="invisible"
+        android:textStyle="bold" />
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="?android:attr/windowBackground"
+        app:menu="@menu/bottom_nav_menu"/>
+
+
+
+</RelativeLayout>
